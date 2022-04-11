@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */; };
 		72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */; };
 		72FB4D0F27FDF32B0014932F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB4D0E27FDF32B0014932F /* AppDelegate.swift */; };
 		72FB4D1327FDF32B0014932F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB4D1227FDF32B0014932F /* LoginViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		72FB4D0B27FDF32B0014932F /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FB4D0E27FDF32B0014932F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		72FB4D0227FDF32B0014932F = {
 			isa = PBXGroup;
 			children = (
+				7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */,
 				72FB4D0D27FDF32B0014932F /* Bankey */,
 				72FB4D0C27FDF32B0014932F /* Products */,
 			);
@@ -163,6 +166,7 @@
 			files = (
 				72FB4D1327FDF32B0014932F /* LoginViewController.swift in Sources */,
 				72FB4D2527FDFB250014932F /* LonginView.swift in Sources */,
+				7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */,
 				72FB4D0F27FDF32B0014932F /* AppDelegate.swift in Sources */,
 				72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */,
 			);
