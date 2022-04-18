@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720781A328071B0E00D52F0C /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */; };
 		7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */; };
 		72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */; };
+		72F6A0D5280DC847000A92FE /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6A0D4280DC847000A92FE /* DummyViewController.swift */; };
+		72F6A0D7280DCC1D000A92FE /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6A0D6280DCC1D000A92FE /* LocalState.swift */; };
 		72FB4D0F27FDF32B0014932F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB4D0E27FDF32B0014932F /* AppDelegate.swift */; };
 		72FB4D1327FDF32B0014932F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FB4D1227FDF32B0014932F /* LoginViewController.swift */; };
 		72FB4D1827FDF32D0014932F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72FB4D1727FDF32D0014932F /* Assets.xcassets */; };
@@ -17,8 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 		7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
+		72F6A0D4280DC847000A92FE /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
+		72F6A0D6280DCC1D000A92FE /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
 		72FB4D0B27FDF32B0014932F /* Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FB4D0E27FDF32B0014932F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72FB4D1227FDF32B0014932F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -39,9 +45,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		720781A428071B2000D52F0C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */,
+				72F6A0D6280DCC1D000A92FE /* LocalState.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		72C2509427FF619A0043DBA8 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */,
 				72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */,
 			);
 			path = Onboarding;
@@ -50,7 +66,6 @@
 		72FB4D0227FDF32B0014932F = {
 			isa = PBXGroup;
 			children = (
-				7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */,
 				72FB4D0D27FDF32B0014932F /* Bankey */,
 				72FB4D0C27FDF32B0014932F /* Products */,
 			);
@@ -67,6 +82,7 @@
 		72FB4D0D27FDF32B0014932F /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				720781A428071B2000D52F0C /* Utils */,
 				72C2509427FF619A0043DBA8 /* Onboarding */,
 				72FB4D2327FDFAE70014932F /* Login */,
 				72FB4D0E27FDF32B0014932F /* AppDelegate.swift */,
@@ -90,6 +106,7 @@
 			children = (
 				72FB4D1227FDF32B0014932F /* LoginViewController.swift */,
 				72FB4D2427FDFB250014932F /* LonginView.swift */,
+				72F6A0D4280DC847000A92FE /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -164,11 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F6A0D5280DC847000A92FE /* DummyViewController.swift in Sources */,
 				72FB4D1327FDF32B0014932F /* LoginViewController.swift in Sources */,
 				72FB4D2527FDFB250014932F /* LonginView.swift in Sources */,
+				720781A328071B0E00D52F0C /* UITextField+SecureToggle.swift in Sources */,
 				7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */,
 				72FB4D0F27FDF32B0014932F /* AppDelegate.swift in Sources */,
 				72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */,
+				72F6A0D7280DCC1D000A92FE /* LocalState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

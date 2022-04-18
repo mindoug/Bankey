@@ -9,17 +9,11 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
     let stackView = UIStackView()
-    let imageView = UIImageView()
-    let label = UILabel()
+    let heroImageView = UIImageView()
+    let titleLabel = UILabel()
     
     let heroImageName: String
     let titleText: String
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        style()
-        layout()
-    }
     
     init(heroImageName: String, titleText: String) {
         self.heroImageName = heroImageName
@@ -29,6 +23,12 @@ class OnboardingViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        style()
+        layout()
     }
 }
 
@@ -42,22 +42,22 @@ extension OnboardingViewController {
         stackView.spacing = 20
         
         // Image
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: heroImageName)
+        heroImageView.translatesAutoresizingMaskIntoConstraints = false
+        heroImageView.contentMode = .scaleAspectFit
+        heroImageView.image = UIImage(named: heroImageName)
         
         // label
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textAlignment = .center
-        label.font = UIFont.preferredFont(forTextStyle: .title3)
-        label.adjustsFontForContentSizeCategory = true
-        label.numberOfLines = 0
-        label.text = titleText
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.numberOfLines = 0
+        titleLabel.text = titleText
         
     }
     func layout() {
-        stackView.addArrangedSubview(imageView)
-        stackView.addArrangedSubview(label)
+        stackView.addArrangedSubview(heroImageView)
+        stackView.addArrangedSubview(titleLabel)
         
         view.addSubview(stackView)
         

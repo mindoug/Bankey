@@ -36,9 +36,9 @@ class LoginView: UIView {
     // give intrensic content size to help with giving a default size
     // remove when using elements with own intrensic size (text fields)
     
-//    override var intrinsicContentSize: CGSize {
-//        return CGSize(width: 200, height: 200)
-//    }
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
+    }
 }
 
 extension LoginView {
@@ -61,6 +61,7 @@ extension LoginView {
         passwordTextField.placeholder = "Password"
         passwordTextField.isSecureTextEntry = true
         passwordTextField.delegate = self
+        passwordTextField.enablePasswordToggle()
         
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         dividerView.backgroundColor = .secondarySystemFill
@@ -70,25 +71,25 @@ extension LoginView {
         clipsToBounds = true
     }
     
-    func layout() {
+    private func layout() {
        
         stackView.addArrangedSubview(usernameTextField)
         stackView.addArrangedSubview(dividerView)
         stackView.addArrangedSubview(passwordTextField)
+        
         addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            usernameTextField.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
-            usernameTextField.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
+            stackView.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
+            stackView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
             // flip it for trailing
-            trailingAnchor.constraint(equalToSystemSpacingAfter: usernameTextField.trailingAnchor, multiplier: 1),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: stackView.trailingAnchor, multiplier: 1),
             // pin stackView to bottom of view
             bottomAnchor.constraint(equalToSystemSpacingBelow: stackView.bottomAnchor, multiplier: 1)
         ])
         
         dividerView.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
-    
 }
 
 // MARK: - UITextFieldDelegate
