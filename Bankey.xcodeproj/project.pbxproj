@@ -13,6 +13,8 @@
 		7263138F2811B05C00441A3D /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263138E2811B05C00441A3D /* AccountSummaryCell.swift */; };
 		7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */; };
 		729A57042810B323007E3245 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729A57032810B323007E3245 /* AccountSummaryViewController.swift */; };
+		72BAD9D72817061B00A31498 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BAD9D62817061B00A31498 /* CurrencyFormatter.swift */; };
+		72BAD9D9281706A100A31498 /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BAD9D8281706A100A31498 /* DecimalUtils.swift */; };
 		72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */; };
 		72F6A0D5280DC847000A92FE /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6A0D4280DC847000A92FE /* DummyViewController.swift */; };
 		72F6A0D7280DCC1D000A92FE /* LocalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F6A0D6280DCC1D000A92FE /* LocalState.swift */; };
@@ -32,6 +34,8 @@
 		7263138E2811B05C00441A3D /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
 		7282EB3A280479C5003E76D8 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		729A57032810B323007E3245 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
+		72BAD9D62817061B00A31498 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		72BAD9D8281706A100A31498 /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
 		72C2509527FF628A0043DBA8 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		72F6A0D4280DC847000A92FE /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		72F6A0D6280DCC1D000A92FE /* LocalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalState.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */,
 				72F6A0D6280DCC1D000A92FE /* LocalState.swift */,
 				72F6A0D8280E0D34000A92FE /* UiViewController+Utils.swift */,
+				72BAD9D62817061B00A31498 /* CurrencyFormatter.swift */,
+				72BAD9D8281706A100A31498 /* DecimalUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -224,11 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72BAD9D9281706A100A31498 /* DecimalUtils.swift in Sources */,
 				726313892811957E00441A3D /* AccountSummaryHeaderView.swift in Sources */,
 				7263138F2811B05C00441A3D /* AccountSummaryCell.swift in Sources */,
 				72F6A0D5280DC847000A92FE /* DummyViewController.swift in Sources */,
 				72F6A0D9280E0D34000A92FE /* UiViewController+Utils.swift in Sources */,
 				72FB4D1327FDF32B0014932F /* LoginViewController.swift in Sources */,
+				72BAD9D72817061B00A31498 /* CurrencyFormatter.swift in Sources */,
 				72FB4D2527FDFB250014932F /* LonginView.swift in Sources */,
 				720781A328071B0E00D52F0C /* UITextField+SecureToggle.swift in Sources */,
 				7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */,
