@@ -4,6 +4,8 @@
 //
 //  Created by Mindy Douglas on 4/20/22.
 //
+// Professional iOS Course JRasmusson - Udemy
+
 import UIKit
 
 class AccountSummaryViewController: UIViewController {

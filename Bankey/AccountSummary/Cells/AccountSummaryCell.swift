@@ -3,7 +3,7 @@
 //  Bankey
 //
 //  Created by Mindy Douglas on 4/21/22.
-//
+// Professional iOS Course JRasmusson - Udemy
 
 import Foundation
 import UIKit
