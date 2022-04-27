@@ -8,6 +8,8 @@
 import Foundation
 
 extension Decimal {
+    
+    // conversion double to decimal
     var doubleValue: Double {
         return NSDecimalNumber(decimal:self).doubleValue
     }

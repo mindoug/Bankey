@@ -9,17 +9,22 @@ import UIKit
 
 struct CurrencyFormatter {
     
+    // takes decimal and breaks it into two parts then does the formatting
+    
     func makeAttributedCurrency(_ amount: Decimal) -> NSMutableAttributedString {
         let tuple = breakIntoDollarsAndCents(amount)
         return makeBalanceAttributed(dollars: tuple.0, cents: tuple.1)
     }
     
+    // a tuple is a way of returning multiple values from one function call
+    // c library function - modf() takes in a double and returns two return types - one representing a whole number and one representing a decimal
+    
     // Converts 929466.23 > "929,466" "23"
     func breakIntoDollarsAndCents(_ amount: Decimal) -> (String, String) {
         let tuple = modf(amount.doubleValue)
         
-        let dollars = convertDollar(tuple.0)
-        let cents = convertCents(tuple.1)
+        let dollars = convertDollar(tuple.0)  // returns first element (dollars)
+        let cents = convertCents(tuple.1) // cents
         
         return (dollars, cents)
     }
