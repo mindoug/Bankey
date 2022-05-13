@@ -21,6 +21,8 @@ protocol LoginViewControllerDelegate: AnyObject {
 
 class LoginViewController: UIViewController {
     
+    // for animation to slide in, adjust constraint so it is off screen and then after the view loads, adjust constraint again so that it is on screen (viewDidAppear)
+    
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
     
@@ -111,17 +113,19 @@ extension LoginViewController {
         // title
         NSLayoutConstraint.activate([
             subtitleLabel.topAnchor.constraint(equalToSystemSpacingBelow: titleLabel.bottomAnchor, multiplier: 3),
-            titleLabel.centerXAnchor.constraint(equalTo: loginView.centerXAnchor)
+            titleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
+        
+        titleLeadingAnchor = titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
+        titleLeadingAnchor?.isActive = true
         
         // subtitle
         NSLayoutConstraint.activate([
             loginView.topAnchor.constraint(equalToSystemSpacingBelow: subtitleLabel.bottomAnchor, multiplier: 3),
-            subtitleLabel.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             subtitleLabel.trailingAnchor.constraint(equalTo: loginView.trailingAnchor)
         ])
-        
-        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOnScreen)
+            
+        subtitleLeadingAnchor = subtitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: leadingEdgeOffScreen)
         subtitleLeadingAnchor?.isActive = true
         
         // LoginView
@@ -205,9 +209,9 @@ extension LoginViewController {
 extension LoginViewController {
     private func animate() {
         let duration = 0.8
-        let animator1 = UIViewPropertyAnimator(duration: duration, curve: .easeInOut) {
+        let animator1 = UIViewPropertyAnimator(duration: TimeInterval(duration), curve: .easeInOut) {
             self.titleLeadingAnchor?.constant = self.leadingEdgeOnScreen
-            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
+//            self.subtitleLeadingAnchor?.constant = self.leadingEdgeOnScreen
             self.view.layoutIfNeeded()
         }
         animator1.startAnimation()
