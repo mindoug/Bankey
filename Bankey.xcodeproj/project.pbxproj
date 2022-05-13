@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		720781A328071B0E00D52F0C /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */; };
+		7256E883282AB57300F9D116 /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256E882282AB57300F9D116 /* NSNotificationName.swift */; };
 		726313892811957E00441A3D /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726313882811957E00441A3D /* AccountSummaryHeaderView.swift */; };
 		7263138B281195C400441A3D /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7263138A281195C400441A3D /* AccountSummaryHeaderView.xib */; };
 		7263138F2811B05C00441A3D /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263138E2811B05C00441A3D /* AccountSummaryCell.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
+		7256E882282AB57300F9D116 /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
 		726313882811957E00441A3D /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		7263138A281195C400441A3D /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		7263138E2811B05C00441A3D /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
@@ -85,10 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				720781A228071B0E00D52F0C /* UITextField+SecureToggle.swift */,
+				72BAD9D8281706A100A31498 /* DecimalUtils.swift */,
 				72F6A0D6280DCC1D000A92FE /* LocalState.swift */,
 				72F6A0D8280E0D34000A92FE /* UiViewController+Utils.swift */,
 				72BAD9D62817061B00A31498 /* CurrencyFormatter.swift */,
-				72BAD9D8281706A100A31498 /* DecimalUtils.swift */,
+				7256E882282AB57300F9D116 /* NSNotificationName.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				7282EB3B280479C5003E76D8 /* OnboardingViewController.swift in Sources */,
 				72FB4D0F27FDF32B0014932F /* AppDelegate.swift in Sources */,
 				72C2509627FF628A0043DBA8 /* OnboardingContainerViewController.swift in Sources */,
+				7256E883282AB57300F9D116 /* NSNotificationName.swift in Sources */,
 				729A57042810B323007E3245 /* AccountSummaryViewController.swift in Sources */,
 				72F6A0D7280DCC1D000A92FE /* LocalState.swift in Sources */,
 				72F6A0DB280E0DC9000A92FE /* MainViewController.swift in Sources */,

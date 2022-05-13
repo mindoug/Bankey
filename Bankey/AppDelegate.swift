@@ -13,11 +13,9 @@ let appColor: UIColor = .systemTeal
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
     let loginViewController = LoginViewController()
     let onboardingViewController = OnboardingContainerViewController()
     let mainViewController = MainViewController()
-    let accountSummaryViewController = AccountSummaryViewController()
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -28,8 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loginViewController.delegate = self
         onboardingViewController.delegate = self
         
+        registerForNotifictions()
+        
         displayLogin()
         return true
+    }
+    
+    private func registerForNotifictions() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didLogout), name: .logout, object: nil)
     }
     
     private func displayLogin() {
@@ -49,11 +53,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainViewController.setStatusBar()
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().backgroundColor = appColor
-        
     }
 }
 
-// makes smooth transition
 extension AppDelegate {
     func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
@@ -87,17 +89,7 @@ extension AppDelegate: OnboardingContainerViewControllerDelegate {
 }
 
 extension AppDelegate: LogoutDelegate {
-    func didLogout() {
+    @objc func didLogout() {
         setRootViewController(loginViewController)
     }
 }
-
-    
-    // 1 delete App Delegate code and replace with no storyboard snippet
-    // 2 delete Scene Delegate file and main storyboard (cmd delete)
-    // 3 Update info plist: shft cmd f "main" and select UIMain Storyboard File Base Name
-    // 4 Info.plist Main Application Scene Manifest
-    
-  
-// You can programmatically select the view controller tabs by using
-// mainViewController.selectedIndex = 2
